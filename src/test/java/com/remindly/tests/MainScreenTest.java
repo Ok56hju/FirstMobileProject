@@ -11,8 +11,15 @@ public class MainScreenTest extends TestBase{
     app.getMainScreen().confirm();
 }
 // verify text
- @Test
+    @Test
     public void appLauchTest(){
     Assert.assertTrue(app.getMainScreen().isRemindTextPresent());
  }
+    @Test
+    public void isLicensesPresent(){
+        app.getReminder().tapOnElementButton();
+        app.getReminder().tapOnLicensesButtun();
+        Assert.assertTrue(app.getLicenses().isLicensesPresent().contains("NOTICES FOR LIBRARIES"));
+    }
+
 }

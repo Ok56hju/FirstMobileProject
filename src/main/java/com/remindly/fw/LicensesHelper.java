@@ -13,4 +13,5 @@ public class LicensesHelper extends BaseHelper{
     public String isLicensesPresent() {
         return driver.findElement(By.id("com.blanyal.remindly:id/licenses_text_view")).getText();
     }
+
 }
